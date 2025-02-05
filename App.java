@@ -32,6 +32,25 @@ public class App {
         System.out.println("sum of odd numbered indexes: " + sumOdd);
         System.out.println("sum of even numbered indexes: " + sumEven);
     }
+    private static void arrayAverage(int[] arr)
+     {
+        int sum = 0; 
+        for (int i = 0; i < arr.length; i++)
+        {
+            sum += arr[i];
+        }
+        int average = sum / arr.length; 
+        System.out.print("{");
+        for (int i = 0; i < arr.length; i++)
+        {
+            System.out.print(arr[i] - average);
+            if ( i != arr.length - 1)
+            {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("}");
+    }
 
     private int sumAllNumbers(int[] array)
     {

@@ -1,47 +1,11 @@
-import java.util.Random;
 public class App {
     public static void main(String[] args) {
 
         
 
     }
-     private static int findMax(int[] arr)
-        {
-            int max = arr[0];
-            for(int num : arr)
-            {
-                if(max < num)
-                {
-                    max = num;
-                }
-            }
-            return max;
-        }
 
-        private static int findMin(int[] arr)
-        {
-            int min = arr[0];
-            for(int num : arr)
-            {
-                if(min > num)
-                {
-                    min = num;
-                }
-            }
-            return min;
-        }
-    public static int [] createArray(int givenSize)
-    {
-        Random rand = new Random();
-        int [] randomArray = new int [givenSize];
-        for(int i = 0 ; i < givenSize ; i ++)
-        {
-            randomArray [i] = rand.nextInt(101);
-        }
-        return randomArray;
-    }
-
-    public void findOddEvenSumTotal(int[] array)
+    public static void findOddEvenSumTotal(int[] array)
     {
         int size = array.length;
         int[] oddNumbers = new int[size/2];
@@ -68,27 +32,8 @@ public class App {
         System.out.println("sum of odd numbered indexes: " + sumOdd);
         System.out.println("sum of even numbered indexes: " + sumEven);
     }
-    private static void arrayAverage(int[] arr)
-     {
-        int sum = 0; 
-        for (int i = 0; i < arr.length; i++)
-        {
-            sum += arr[i];
-        }
-        int average = sum / arr.length; 
-        System.out.print("{");
-        for (int i = 0; i < arr.length; i++)
-        {
-            System.out.print(arr[i] - average);
-            if ( i != arr.length - 1)
-            {
-                System.out.print(", ");
-            }
-        }
-        System.out.print("}");
-    }
 
-    private int sumAllNumbers(int[] array)
+    private static int sumAllNumbers(int[] array)
     {
         int sum = 0;
         for(int i : array)

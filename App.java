@@ -3,7 +3,7 @@ public class App {
     public static void main(String[] args) {
         
     }
-    public static void createArray(int givenSize)
+    public static int [] createArray(int givenSize)
     {
         Random rand = new Random();
         int [] randomArray = new int [givenSize];
@@ -11,5 +11,6 @@ public class App {
         {
             randomArray [i] = rand.nextInt(101);
         }
+        return randomArray;
     }
 }

@@ -5,6 +5,31 @@ public class App {
         
 
     }
+     private static int findMax(int[] arr)
+        {
+            int max = arr[0];
+            for(int num : arr)
+            {
+                if(max < num)
+                {
+                    max = num;
+                }
+            }
+            return max;
+        }
+
+        private static int findMin(int[] arr)
+        {
+            int min = arr[0];
+            for(int num : arr)
+            {
+                if(min > num)
+                {
+                    min = num;
+                }
+            }
+            return min;
+        }
     public static int [] createArray(int givenSize)
     {
         Random rand = new Random();

@@ -1,30 +1,46 @@
 public class App {
-     private static findMax()
+    public static void main(String[] args) {
+
+        
+
+    }
+
+    public void findOddEvenSumTotal(int[] array)
+    {
+        int size = array.length;
+        int[] oddNumbers = new int[size/2];
+        int[] evenNumbers = new int[(int)(size/2 + 0.5)];
+
+        int index = 0;
+
+        for(int i : array)
         {
-            int max = arr[0];
-            for(int num : arr)
+            if(i%2 == 0)
             {
-                if(max < num)
-                {
-                    max = num;
-                }
+                evenNumbers[index] = i;
             }
-            return max;
+            else
+            {
+                oddNumbers[index] = i;
+            }
+            index++;
         }
 
-        private static findMin()
-        {
-            int min = arr[0];
-            for(int num : arr)
-            {
-                if(min > num)
-                {
-                    min = num;
-                }
-            }
-            return min;
-        }
-    public static void main(String[] args) {
-        
+        int sumEven = sumAllNumbers(evenNumbers);
+        int sumOdd = sumAllNumbers(oddNumbers);
+
+        System.out.println("sum of odd numbered indexes: " + sumOdd);
+        System.out.println("sum of even numbered indexes: " + sumEven);
     }
+
+    private int sumAllNumbers(int[] array)
+    {
+        int sum = 0;
+        for(int i : array)
+        {
+            sum += i;
+        }
+        return sum;
+    }
+
 }

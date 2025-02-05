@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Random;
 
 public class App {
     
@@ -93,7 +93,4 @@ public static int findMax(int[] arr)
         }
         return sum;
     }
-}
-
-
 }
